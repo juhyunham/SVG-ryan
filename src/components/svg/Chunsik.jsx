@@ -1,22 +1,33 @@
 import React from 'react';
 
 const chunsik = (props) => (
-	<svg id="chunsik" viewBox="0 0 300 300">
-		<g class="ears">
-			<path d="M46,32 L46,30 C46,16 26,16 26,30 L26,32" fill="#ffd677" stroke="#000" stroke-width="2.5" stroke-linecap="round"></path>
-			<path d="M74,32 L74,30 C74,16 94,16 94,30 L94,32" fill="#ffd677" stroke="#000" stroke-width="2.5" stroke-linecap="round"></path>
+	<svg height="300" width="350">
+		<g className="face">
+			<ellipse cx="220" cy="200" rx="180" ry="150" stroke="black" strokeWidth="5" fill="#ffd677" />
+			<path d="M 83 105 q 0 -70 60 -38" stroke="black" strokeWidth="5" fill="#ffd677"/>
+			<path d="M 297 67 q 60 -32 60 38" stroke="black" strokeWidth="5" fill="#ffd677" />
 		</g>
-		
-		<ellipse class="face" cx="100" cy="150" rx="60" ry="55" fill="#ffd677" stroke="#000" stroke-width="2.5"></ellipse>
-		{/* <g class="eyes">
-			<circle cx="50" cy="73" r="3" fill="#000">
-			</circle><circle cx="80" cy="50" r="3" fill="#000"></circle>
+		<g className="eyes">
+			<circle r="10" cx="170" cy="170"/>
+			<circle r="10" cx="270" cy="170"/>
+			{/* <path d="M 160 170 q 10 -30 20 0" stroke="black" strokeWidth="5" />
+			<path d="M 260 170 q 10 -30 20 0" stroke="black" strokeWidth="5" /> */}
 		</g>
-		<g class="muzzle">
-			<path d="M60,66 C58.5,61 49,63 49,69 C49,75 58,77 60,71 M60,66 C61.5,61 71,63 71,69 C71,75 62,77 60,71" fill="#fff"></path>
-			<path d="M60,66 C58.5,61 49,63 49,69 C49,75 58,77 60,71 M60,66 C61.5,61 71,63 71,69 C71,75 62,77 60,71" fill="#fff" stroke="#000" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"></path>
-        </g> */}
-	</svg>			
+		<g className="cheek">
+			<circle r="30" cx="140" cy="220" fill="#ff9470"/>
+			<circle r="30" cx="300" cy="220" fill="#ff9470"/>
+		</g>
+		<g className="mouth">
+		{/* 웃을 때 240에서 260으로 */}
+		<ellipse cx="220" cy="240" rx="15" ry="20" fill="#bf5849" stroke="black" strokeWidth="5"/>
+		</g>
+		<g className="nose">
+			<line x1="150" y1="235" x2="290" y2="205" stroke="black" strokeWidth="5"/>
+			<line x1="150" y1="205" x2="290" y2="235" stroke="black" strokeWidth="5"/>
+			<path d="M 170 220 C 170 180 270 180 270 220 C 270 260 220 260 220 230 C 220 260 170 260 170 220" stroke="black" strokeWidth="5" fill="white"/>
+		</g>
+	</svg>
+	
 );
 
 export default chunsik;
