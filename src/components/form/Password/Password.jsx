@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Password = (props) => (
+const Password = React.forwardRef((props, ref) => (
 	<span className="input_box">
-		<input type="password" placeholder="비밀번호를 입력하세요."/>
+		<input ref={ref} type="password" placeholder="비밀번호를 입력하세요."/>
 	</span>
-);
+));
 
 export default Password;
