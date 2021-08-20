@@ -8,10 +8,14 @@ const Form = (props) => {
 	const passwordRef = React.createRef();
 
 	const onSubmit = () => {
-		localStorage.setItem(`id`, inputRef.current.value)
-		localStorage.setItem(`password`, passwordRef.current.value)
-		inputRef.current.value = ``
-		passwordRef.current.value = ``
+		const account = [
+			JSON.stringify({
+				id: inputRef.current.value, 
+				password: passwordRef.current.value
+			})
+		]
+
+		localStorage.setItem(`account`, account)
 	}
 
 	return (
